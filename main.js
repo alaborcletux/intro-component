@@ -3,8 +3,7 @@ function validate() {
     var lastName = document.getElementById("lastname").ariaValueMax;
     var formEmail = document.getElementById("email").ariaValueMax;
     var formPassword = document.getElementById("password").ariaValueMax;
-    if (firstName == null || firstName == "",lastName == null || lastName == "",formEmail == null || formEmail == "",formPassword == null || formPassword == ""){
-        
+    if (firstName == null || firstName == " ",lastName == null || lastName == "",formEmail == null || formEmail == "",formPassword == null || formPassword == ""){
         document.getElementById("fnlabel").style.visibility="visible";
         document.getElementById("fnimg").style.visibility="visible";
         document.getElementById("lnlabel").style.visibility="visible";
@@ -14,6 +13,8 @@ function validate() {
         document.getElementById("passlabel").style.visibility="visible";
         document.getElementById("passimg").style.visibility="visible";
 
+        
+    } else{
         return false;
     }
 }
